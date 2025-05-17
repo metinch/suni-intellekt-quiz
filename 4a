@@ -1,0 +1,61 @@
+			SPRİNT 4A
+1. def hesabla():
+    try:
+        a = float(input("Birinci rəqəmi daxil edin: "))
+        b = float(input("İkinci rəqəmi daxil edin: "))
+        əməliyyat = input("Əməliyyatı seçin (+, -, *, /): ")
+      
+        if əməliyyat == "+":
+            nəticə = a + b
+        elif əməliyyat == "-":
+            nəticə = a - b
+        elif əməliyyat == "*":
+            nəticə = a * b
+        elif əməliyyat == "/":
+            if b == 0:
+                raise ZeroDivisionError("Bölmə sıfıra bölünə bilməz!")
+            nəticə = a / b
+        else:
+            print("Yanlış əməliyyat!")
+            return
+                print("Nəticə:", nəticə)
+    
+    except ValueError:
+        print("Zəhmət olmasa, düzgün rəqəm daxil edin!")
+    except ZeroDivisionError as e:
+        print(e)
+    except Exception as e:
+        print(f"Bir xəta baş verdi: {e}")
+    
+    print("Hesablama bitdi")
+
+hesabla()
+2. def bolunenler():
+    result = [i for i in range(1, 51) if i % 11 == 0]
+    return result
+print(bolunenler())
+3. def ilk_herfler():
+    sozler = ["kitab", "qələm", "defter", "silgi"]
+    ilk_harfler = [soz[0] for soz in sozler]
+    return ilk_harfler
+print(ilk_herfler())
+4. def seher_kodlari():
+    seherler = ["Bakı", "Gəncə", "Sumqayıt"]
+    kodlar = [12, 22, 18]
+    seher_kodlari_dict = dict(zip(seherler, kodlar))
+    return seher_kodlari_dict
+print(seher_kodlari())
+5. 
+km_to_mile = lambda km: km * 0.621371
+dəyərlər = [5, 10, 20, 50, 100]
+
+for km in dəyərlər:
+    print(f"{km} km = {km_to_mile(km)} mil")
+6. 
+qiymətlər = [100, 200, 300,400]
+yeni_qiymətlər = list(map(lambda qiymət: qiymət * 1.18, qiymətl))
+print(yeni_qiymətlər)
+7. from functools import reduce
+qiymətlər = [150, 80, 220, 45]
+en_kicik = reduce(lambda x, y: x if x < y else y, qiymətlər)
+print("Ən kiçik qiymət:", en_kicik)
