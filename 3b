@@ -1,0 +1,46 @@
+Sprint 3b
+1. def salam():
+    print("Salam, Dünya!")
+salam()
+2. def kub_hesabla(n):
+    return n ** 3
+nəticə = kub_hesabla(2)
+print("Kub:", nəticə)
+3. def birlesdir(soz1, soz2):
+    return soz1 + " " + soz2
+print(birlesdir)
+4. def cap_et(my_list):
+    for element in my_list:
+        print(element)
+5. def toplam(*args):
+    return sum(args)
+print(toplam(1, 2, 3))         
+print(toplam(10, 20, 30, 40))  
+print(toplam())      
+6. def ortalama(*args):
+    if len(args) == 0:
+        return "Rəqəm yoxdur"
+    return sum(args) / len(args)
+print(ortalama(4, 8, 10))  
+print(ortalama())           
+7. def adlar_rəqəmlər(**kwargs):
+    for ad, rəqəm in kwargs.items():
+        print(f"ad: {ad}, rəqəm: {rəqəm}")
+8. def tip_yoxla(dəyər):
+    if isinstance(dəyər, str):
+        print("mətn")
+    elif isinstance(dəyər, (int, float)):
+        print("rəqəm")
+    else:
+        print("başqa")
+9. def yas_kateqoriya():
+    yas = int(input("Yaşınızı daxil edin: "))
+    if yas < 18:
+        print("Gənc")
+    else:
+        print("Yetkin")
+yas_kateqoriya()
+10. def soz_uzunluq():
+    soz = input("Bir söz daxil edin: ")
+    print("Sözün uzunluğu:", len(soz))
+soz_uzunluq()
